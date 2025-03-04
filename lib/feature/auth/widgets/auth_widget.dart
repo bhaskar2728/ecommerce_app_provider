@@ -24,7 +24,7 @@ class AuthWidget extends StatelessWidget {
       key: context.read<LoginController>().formKey,
       child: Column(
         children: [
-
+          // Email TextFormField
           CustomTextFormField(
             prefixImage: const Icon(
               Icons.email_outlined,
