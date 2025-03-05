@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/image_const.dart';
+import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
 import 'package:ecommerce_app/feature/onboarding/controller/onboarding_controller.dart';
 import 'package:ecommerce_app/feature/onboarding/widgets/next_button.dart';
@@ -42,18 +43,18 @@ class OnboardingScreen extends StatelessWidget {
           ),
           const Positioned(
             top: DeviceUtil.toolBarHeight,
-            right: 20,
+            right: NumConst.defaultPadding,
             child: SkipButton(),
           ),
           const Positioned(
-            bottom: DeviceUtil.bottomNavBarHeight+20,
-            left: 20,
+            bottom: DeviceUtil.bottomNavBarHeight+NumConst.defaultPadding,
+            left: NumConst.defaultPadding,
             child: PageIndicator(
             ),
           ),
           const Positioned(
             bottom: DeviceUtil.bottomNavBarHeight,
-            right: 20,
+            right: NumConst.defaultPadding,
             child: NextButton(),
           )
         ],

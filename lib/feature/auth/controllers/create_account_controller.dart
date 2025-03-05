@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CreateAccountController extends ChangeNotifier {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -35,7 +37,13 @@ class CreateAccountController extends ChangeNotifier {
     notifyListeners();
   }
 
-  void registerUser(){
-    _formKey.currentState!.validate();
+  void registerUser(BuildContext context){
+    // _formKey.currentState!.validate();
+    GoRouter.of(context).pushReplacementNamed(Routes.emailVerificationRoute);
+  }
+  
+  void verifyEmail(BuildContext context){
+    GoRouter.of(context).pushReplacementNamed(Routes.accountCreatedRoute);
+    
   }
 }

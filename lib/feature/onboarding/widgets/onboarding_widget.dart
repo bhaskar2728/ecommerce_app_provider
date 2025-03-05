@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/util/device_util.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class OnBoardingWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 20,
+        horizontal: NumConst.defaultPadding,
       ),
       child: Column(
         children: [
@@ -27,7 +28,7 @@ class OnBoardingWidget extends StatelessWidget {
             height: DeviceUtil.screenHeight(context) * 0.6,
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           Text(
             title,

@@ -29,4 +29,15 @@ class TextConst{
   static const String phoneNumber = 'Phone Number';
   static const String password = 'Password';
   static const String registerButtonText = 'Create Account';
+
+  // Email Verification Screen
+  static const String verifyYourEmailAddress = 'Verify your email address!';
+  static const String congrats = 'Congratulations! Your Account Awaits: Verify your email to start shopping and experience a world of unrivaled deals and personalised offers.';
+  static const String continueText = 'Continue';
+  static const String resendEmail = 'Resend Email';
+
+  // Account Created Screen
+  static const String accountCreatedMsg = 'Your account successfully created!';
+  static const String welcomeMsg = 'Welcome to your ultimate shopping destination: Your Account is created: Unleash the joy of seamless online shopping!';
+
 }

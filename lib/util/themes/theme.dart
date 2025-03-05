@@ -1,15 +1,26 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static final lightTheme = ThemeData.light().copyWith(
     textTheme: AppTextTheme.lightTextTheme,
     colorScheme: ColorScheme.fromSeed(seedColor: ColorConst.primaryColor),
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle.dark,
+      backgroundColor: Colors.transparent,
+      foregroundColor: Colors.black,
+    )
   );
   static final darkTheme = ThemeData.dark().copyWith(
     textTheme: AppTextTheme.darkTextTheme,
     colorScheme: ColorScheme.fromSeed(seedColor: ColorConst.primaryColor),
+    appBarTheme: const AppBarTheme(
+      systemOverlayStyle: SystemUiOverlayStyle.light,
+      backgroundColor: Colors.transparent,
+      foregroundColor: Colors.white,
+    )
   );
 }
 

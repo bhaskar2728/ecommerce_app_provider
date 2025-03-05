@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/image_const.dart';
+import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
 import 'package:ecommerce_app/feature/auth/widgets/auth_widget.dart';
 import 'package:ecommerce_app/util/device_util.dart';
@@ -13,7 +14,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20) +
+        padding: const EdgeInsets.symmetric(horizontal: NumConst.defaultPadding) +
             const EdgeInsets.only(top: DeviceUtil.toolBarHeight + 25),
         child: SingleChildScrollView(
           child: Column(
@@ -27,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                 size: 60,
               ),
               const SizedBox(
-                height: 20,
+                height: NumConst.defaultPadding,
               ),
               Text(
                 TextConst.loginTitle,
@@ -45,7 +46,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: NumConst.defaultPadding,
               ),
               const AuthWidget(),
             ],

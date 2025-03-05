@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/image_const.dart';
+import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
 import 'package:flutter/material.dart';
 
@@ -53,8 +54,8 @@ class LoginWithSSOWidget extends StatelessWidget {
                   )),
               child: Image.asset(
                 ImageConst.googleIcon,
-                width: 20,
-                height: 20,
+                width: NumConst.defaultPadding,
+                height: NumConst.defaultPadding,
               ),
             ),
             const SizedBox(
@@ -69,8 +70,8 @@ class LoginWithSSOWidget extends StatelessWidget {
                   )),
               child: Image.asset(
                 ImageConst.facebookIcon,
-                width: 20,
-                height: 20,
+                width: NumConst.defaultPadding,
+                height: NumConst.defaultPadding,
               ),
             ),
           ],

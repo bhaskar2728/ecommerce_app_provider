@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants/color_const.dart';
+import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
 import 'package:ecommerce_app/feature/auth/controllers/create_account_controller.dart';
 import 'package:ecommerce_app/feature/auth/validators.dart';
@@ -60,7 +61,7 @@ class AuthCreateAccountWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           CustomTextFormField(
             prefixImage: const Icon(
@@ -74,7 +75,7 @@ class AuthCreateAccountWidget extends StatelessWidget {
             autoValidate: true,
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           CustomTextFormField(
             prefixImage: const Icon(
@@ -87,7 +88,7 @@ class AuthCreateAccountWidget extends StatelessWidget {
             autoValidate: true,
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           CustomTextFormField(
             prefixImage: const Icon(
@@ -103,7 +104,7 @@ class AuthCreateAccountWidget extends StatelessWidget {
             maxLength: 10,
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           CustomTextFormField(
             prefixImage: const Icon(
@@ -128,7 +129,7 @@ class AuthCreateAccountWidget extends StatelessWidget {
             autoValidate: true,
           ),
           const SizedBox(
-            height: 20,
+            height: NumConst.defaultPadding,
           ),
           const TermsAndConditionsCheckBox(),
           const SizedBox(

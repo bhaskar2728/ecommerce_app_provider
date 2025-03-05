@@ -1,13 +1,13 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
 import 'package:ecommerce_app/feature/auth/controllers/create_account_controller.dart';
-import 'package:ecommerce_app/feature/auth/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class RegisterButton extends StatelessWidget {
-  const RegisterButton({
-    super.key,
+class ContinueButton extends StatelessWidget {
+  final void Function() onPressed;
+  const ContinueButton({
+    super.key, required this.onPressed,
   });
 
   @override
@@ -24,13 +24,12 @@ class RegisterButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: ()=>context.read<CreateAccountController>().registerUser(context),
+      onPressed: onPressed,
       child: Text(
-        TextConst.registerButtonText,
-        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-          color: ColorConst.whiteColor,
-          fontWeight: FontWeight.bold,
-        )
+          TextConst.continueText,
+          style: Theme.of(context).textTheme.labelLarge?.copyWith(
+            color: ColorConst.whiteColor,
+          )
       ),
     );
   }
