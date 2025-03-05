@@ -1,11 +1,12 @@
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
+import 'package:ecommerce_app/feature/auth/controllers/create_account_controller.dart';
 import 'package:ecommerce_app/feature/auth/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class SignInButton extends StatelessWidget {
-  const SignInButton({
+class RegisterButton extends StatelessWidget {
+  const RegisterButton({
     super.key,
   });
 
@@ -23,11 +24,12 @@ class SignInButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: context.read<LoginController>().signIn,
+      onPressed: context.read<CreateAccountController>().registerUser,
       child: Text(
-        TextConst.signInButtonText,
+        TextConst.registerButtonText,
         style: Theme.of(context).textTheme.labelLarge?.copyWith(
           color: ColorConst.whiteColor,
+          fontWeight: FontWeight.bold,
         )
       ),
     );

@@ -11,6 +11,8 @@ class CustomTextFormField extends StatelessWidget {
   final bool obscureText;
   final bool autoValidate;
   final Widget? suffixIcon;
+  final TextInputType textInputType;
+  final int? maxLength;
 
   const CustomTextFormField({
     super.key,
@@ -18,22 +20,29 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     required this.controller,
     required this.validator,
-    required this.obscureText,
+    this.obscureText = false,
     required this.autoValidate,
     this.suffixIcon,
+    this.textInputType = TextInputType.text,
+    this.maxLength,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      maxLength: maxLength,
+      keyboardType: textInputType,
       controller: controller,
       validator: validator,
       autovalidateMode: autoValidate ? AutovalidateMode.onUserInteraction : null,
       obscureText: obscureText,
       cursorColor: ColorConst.primaryColor,
       decoration: InputDecoration(
+        labelText: hintText,
+        counterText: '',
         contentPadding: const EdgeInsets.symmetric(
           vertical: 16,
+          horizontal: 16,
         ),
         disabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
@@ -58,11 +67,23 @@ class CustomTextFormField extends StatelessWidget {
           borderSide:
               const BorderSide(color: ColorConst.primaryColor, width: 2),
         ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+          borderSide: const BorderSide(
+            width: 0.5,
+            color: Colors.redAccent,
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+      borderSide: const BorderSide(
+        width: 0.5,
+        color: Colors.redAccent,
+      ),
+    ),
         prefixIcon: prefixImage,
         suffixIcon: suffixIcon,
         border: const OutlineInputBorder(),
-        hintText: hintText,
-        hintStyle: const TextStyle(color: Colors.grey),
       ),
     );
   }

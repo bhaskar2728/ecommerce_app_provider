@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/feature/auth/screens/create_account_screen.dart';
 import 'package:ecommerce_app/feature/auth/screens/login_screen.dart';
 import 'package:ecommerce_app/feature/onboarding/screens/onboarding_screen.dart';
 import 'package:ecommerce_app/routes/app_routes.dart';
@@ -15,6 +16,11 @@ class AppRouter{
         name: Routes.loginRoute,
         path: '/${Routes.loginRoute}',
         builder: (context, state) => const LoginScreen(),
+      ),
+      GoRoute(
+        name: Routes.createAccountRoute,
+        path: '/${Routes.createAccountRoute}',
+        builder: (context, state) => const CreateAccountScreen(),
       ),
     ],
   );

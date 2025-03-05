@@ -1,11 +1,11 @@
 import 'package:ecommerce_app/constants/color_const.dart';
-import 'package:ecommerce_app/feature/auth/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class CustomCheckBox extends StatelessWidget {
+  final bool value;
+  final void Function(bool?) onChanged;
   const CustomCheckBox({
-    super.key,
+    super.key, required this.value, required this.onChanged,
   });
 
   @override
@@ -13,8 +13,8 @@ class CustomCheckBox extends StatelessWidget {
     return Checkbox(
       checkColor: Colors.white,
       activeColor: ColorConst.primaryColor,
-      value: context.watch<LoginController>().shouldRememberMe,
-      onChanged: (value)=>context.read<LoginController>().updateShouldRememberMe(),
+      value:value,
+      onChanged: onChanged,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
       ),

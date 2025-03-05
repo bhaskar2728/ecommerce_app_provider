@@ -19,4 +19,14 @@ class TextConst{
   static const String forgotPassword = 'Forgot Password ?';
   static const String createAccount = 'Create Account';
   static const String loginWith = 'or login with';
+
+  // Create Account Screen
+  static const String letsCreateAccount = '''Let's create your account''';
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String username = 'Username';
+  static const String email = 'Email';
+  static const String phoneNumber = 'Phone Number';
+  static const String password = 'Password';
+  static const String registerButtonText = 'Create Account';
 }

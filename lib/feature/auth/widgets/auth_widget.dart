@@ -10,7 +10,7 @@ import 'package:ecommerce_app/util/device_util.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'custom_check_box.dart';
+import 'remember_me_checkbox.dart';
 import 'sign_in_button.dart';
 
 class AuthWidget extends StatelessWidget {
@@ -65,18 +65,7 @@ class AuthWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  const CustomCheckBox(),
-                  Text(
-                    TextConst.rememberMe,
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                          fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                        ),
-                  ),
-                ],
-              ),
+              const RememberMeCheckbox(),
               Text(
                 TextConst.forgotPassword,
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(

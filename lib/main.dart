@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/feature/auth/controllers/create_account_controller.dart';
 import 'package:ecommerce_app/feature/auth/controllers/login_controller.dart';
 import 'package:ecommerce_app/feature/onboarding/controller/onboarding_controller.dart';
 import 'package:ecommerce_app/feature/onboarding/screens/onboarding_screen.dart';
@@ -14,6 +15,9 @@ void main() {
       ),
       ChangeNotifierProvider(
         create: (_) => LoginController(),
+      ),
+      ChangeNotifierProvider(
+        create: (_) => CreateAccountController(),
       ),
     ],
     child: const MyApp(),

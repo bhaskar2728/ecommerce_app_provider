@@ -9,6 +9,7 @@ class DeviceUtil{
     return MediaQuery.of(context).size.height;
   }
   static bool isDarkMode(BuildContext context){
+    print("KDEBUG::isDarkMode ${MediaQuery.of(context).platformBrightness}");
     return MediaQuery.of(context).platformBrightness == Brightness.dark;
   }
   static const toolBarHeight = kToolbarHeight;

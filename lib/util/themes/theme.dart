@@ -16,9 +16,9 @@ class AppTheme {
 class AppTextTheme {
   static final lightTextTheme = GoogleFonts.poppinsTextTheme().copyWith(
     bodyLarge: GoogleFonts.poppins().copyWith(color: Colors.black),
-    bodySmall: GoogleFonts.poppins().copyWith(color: Colors.black),
+    bodySmall: GoogleFonts.poppins().copyWith(color: Colors.black,fontSize: 14,),
     bodyMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
-    labelLarge: GoogleFonts.poppins().copyWith(color: Colors.black),
+    labelLarge: GoogleFonts.poppins().copyWith(color: Colors.black,fontWeight: FontWeight.bold,),
     labelMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
     headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.black),
     headlineMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
@@ -26,9 +26,9 @@ class AppTextTheme {
   );
   static final darkTextTheme = GoogleFonts.poppinsTextTheme().copyWith(
     bodyLarge: GoogleFonts.poppins().copyWith(color: Colors.white),
-    bodySmall: GoogleFonts.poppins().copyWith(color: Colors.white),
+    bodySmall: GoogleFonts.poppins().copyWith(color: Colors.white,fontSize: 14,),
     bodyMedium: GoogleFonts.poppins().copyWith(color: Colors.white),
-    labelLarge: GoogleFonts.poppins().copyWith(color: Colors.white),
+    labelLarge: GoogleFonts.poppins().copyWith(color: Colors.white,fontWeight: FontWeight.bold,),
     labelMedium: GoogleFonts.poppins().copyWith(color: Colors.white),
     headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.white),
     headlineMedium: GoogleFonts.poppins().copyWith(color: Colors.white),

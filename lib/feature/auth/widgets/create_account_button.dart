@@ -16,9 +16,10 @@ class CreateAccountButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        foregroundColor: DeviceUtil.isDarkMode(context)
-            ? MaterialStateProperty.all(ColorConst.whiteColor)
-            : MaterialStateProperty.all(ColorConst.blackColor),
+        surfaceTintColor: MaterialStateProperty.all(
+            DeviceUtil.isDarkMode(context)
+                ? Theme.of(context).scaffoldBackgroundColor
+                : Colors.white),
         backgroundColor: MaterialStateProperty.all(
             DeviceUtil.isDarkMode(context)
                 ? Theme.of(context).scaffoldBackgroundColor
@@ -35,12 +36,10 @@ class CreateAccountButton extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: context.read<LoginController>().createAccount,
+      onPressed: ()=>context.read<LoginController>().createAccount(context),
       child:  Text(
         TextConst.createAccount,
-        style: Theme.of(context).textTheme.labelLarge?.copyWith(
-            fontWeight: FontWeight.bold,
-        ),
+        style: Theme.of(context).textTheme.labelLarge
       ),
     );
   }

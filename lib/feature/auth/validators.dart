@@ -29,4 +29,24 @@ class Validators{
     return null;
   }
 
+  static String? firstNameValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'First name cannot be empty';
+    }
+    return null;
+  }
+  static String? lastNameValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Last name cannot be empty';
+    }
+    return null;
+  }
+  static String? usernameValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Username cannot be empty';
+    }
+    return null;
+  }
+
+
 }
