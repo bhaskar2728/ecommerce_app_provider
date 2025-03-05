@@ -39,4 +39,8 @@ class LoginController extends ChangeNotifier {
   void createAccount(BuildContext context){
     GoRouter.of(context).pushNamed(Routes.createAccountRoute);
   }
+
+  void forgotPassword(BuildContext context){
+    GoRouter.of(context).pushNamed(Routes.forgotPasswordRoute);
+  }
 }

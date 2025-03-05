@@ -9,14 +9,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-class EmailVerificationScreen extends StatelessWidget {
-  const EmailVerificationScreen({super.key});
+class ResetPasswordScreen extends StatelessWidget {
+  const ResetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         actions: [
           IconButton(
             onPressed: GoRouter.of(context).pop,
@@ -36,26 +35,26 @@ class EmailVerificationScreen extends StatelessWidget {
               Image.asset(ImageConst.onboarding1,
                   width: DeviceUtil.screenWidth(context) * 0.5,
                   height: DeviceUtil.screenHeight(context) * 0.4),
-              Text(TextConst.verifyYourEmailAddress,
+              Text(TextConst.resetPasswordHeading,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                 fontWeight: FontWeight.bold,
               ),),
-              const SizedBox(height: NumConst.defaultPadding,),
+              const SizedBox(height: 20,),
               Text('email@email.com',
               style: Theme.of(context).textTheme.labelMedium,),
               const SizedBox(height: NumConst.defaultPadding,),
-              Text(TextConst.congrats,
+              Text(TextConst.resetPasswordMsg,
                 style: Theme.of(context).textTheme.labelMedium?.copyWith(
                   color: ColorConst.greyColor,
                 ),
               textAlign: TextAlign.center,),
-              const SizedBox(height: 30,),
+              const SizedBox(height: 35,),
               SizedBox(
                 width: double.infinity,
                 height: 50,
                 child: AuthButton(
-                  btnText: TextConst.continueText,
-                  onPressed: ()=>context.read<CreateAccountController>().verifyEmail(context),
+                  btnText: TextConst.done,
+                  onPressed: GoRouter.of(context).pop,
                 ),
               ),
               const SizedBox(height: 30,),

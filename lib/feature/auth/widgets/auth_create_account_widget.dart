@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/auth_button.dart';
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
@@ -5,7 +6,6 @@ import 'package:ecommerce_app/feature/auth/controllers/create_account_controller
 import 'package:ecommerce_app/feature/auth/validators.dart';
 import 'package:ecommerce_app/feature/auth/widgets/custom_text_form_field.dart';
 import 'package:ecommerce_app/feature/auth/widgets/login_with_sso_widget.dart';
-import 'package:ecommerce_app/feature/auth/widgets/register_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -136,10 +136,14 @@ class AuthCreateAccountWidget extends StatelessWidget {
             height: 30,
           ),
           // SignIn Button
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             height: 50,
-            child: RegisterButton(),
+            child: AuthButton(
+                onPressed: () => context
+                    .read<CreateAccountController>()
+                    .registerUser(context),
+                btnText: TextConst.registerButtonText),
           ),
           const SizedBox(height: 25),
           // Other Login Options

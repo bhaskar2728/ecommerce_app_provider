@@ -4,20 +4,22 @@ import 'package:ecommerce_app/feature/auth/controllers/create_account_controller
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class ContinueButton extends StatelessWidget {
+class AuthButton extends StatelessWidget {
   final void Function() onPressed;
-  const ContinueButton({
-    super.key, required this.onPressed,
+  final String btnText;
+
+  const AuthButton({
+    super.key,
+    required this.onPressed,
+    required this.btnText,
   });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-        foregroundColor:
-        MaterialStateProperty.all(ColorConst.whiteColor),
-        backgroundColor:
-        MaterialStateProperty.all(ColorConst.primaryColor),
+        foregroundColor: MaterialStateProperty.all(ColorConst.whiteColor),
+        backgroundColor: MaterialStateProperty.all(ColorConst.primaryColor),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
@@ -25,12 +27,10 @@ class ContinueButton extends StatelessWidget {
         ),
       ),
       onPressed: onPressed,
-      child: Text(
-          TextConst.continueText,
+      child: Text(btnText,
           style: Theme.of(context).textTheme.labelLarge?.copyWith(
-            color: ColorConst.whiteColor,
-          )
-      ),
+                color: ColorConst.whiteColor,
+              )),
     );
   }
 }

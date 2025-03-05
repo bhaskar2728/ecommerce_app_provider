@@ -40,4 +40,14 @@ class TextConst{
   static const String accountCreatedMsg = 'Your account successfully created!';
   static const String welcomeMsg = 'Welcome to your ultimate shopping destination: Your Account is created: Unleash the joy of seamless online shopping!';
 
+  // Forgot Password Screen
+  static const String forgotPasswordHeading = 'Forgot Password';
+  static const String forgotPasswordMsg = '''Don't worry sometimes people can forget too, enter your email and we will send you a password reset link.''';
+  static const String submitText = 'Submit';
+
+  // Reset Password Screen
+  static const String resetPasswordHeading = 'Password Reset Email Sent';
+  static const String resetPasswordMsg = '''A password reset link has been sent to your email address. Please check your inbox and follow the instructions provided to reset your password.''';
+  static const String done = 'Done';
+
 }

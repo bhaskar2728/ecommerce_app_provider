@@ -1,8 +1,8 @@
+import 'package:ecommerce_app/common/widgets/auth_button.dart';
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/image_const.dart';
 import 'package:ecommerce_app/constants/num_constants.dart';
 import 'package:ecommerce_app/constants/text_const.dart';
-import 'package:ecommerce_app/feature/auth/widgets/continue_button.dart';
 import 'package:ecommerce_app/util/device_util.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +38,8 @@ class AccountCreatedScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 height: 50,
-                child: ContinueButton(
+                child: AuthButton(
+                  btnText: TextConst.continueText,
                   onPressed: (){},
                 ),
               ),

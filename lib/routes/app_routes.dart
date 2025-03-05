@@ -4,5 +4,7 @@ class Routes{
   static const String createAccountRoute = 'createAccount';
   static const String emailVerificationRoute = 'emailVerification';
   static const String accountCreatedRoute = 'accountCreated';
+  static const String forgotPasswordRoute = 'forgotPassword';
+  static const String resetPasswordRoute = 'resetPassword';
 
 }

@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/common/widgets/auth_button.dart';
 import 'package:ecommerce_app/constants/color_const.dart';
 import 'package:ecommerce_app/constants/image_const.dart';
 import 'package:ecommerce_app/constants/num_constants.dart';
@@ -12,7 +13,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'remember_me_checkbox.dart';
-import 'sign_in_button.dart';
 
 class AuthWidget extends StatelessWidget {
   const AuthWidget({
@@ -48,7 +48,9 @@ class AuthWidget extends StatelessWidget {
             ),
             suffixIcon: IconButton(
               icon: Icon(
-                context.watch<LoginController>().obscureText ? Icons.visibility_off : Icons.visibility,
+                context.watch<LoginController>().obscureText
+                    ? Icons.visibility_off
+                    : Icons.visibility,
                 color: ColorConst.greyColor,
               ),
               onPressed: context.read<LoginController>().showHidePassword,
@@ -67,24 +69,31 @@ class AuthWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const RememberMeCheckbox(),
-              Text(
-                TextConst.forgotPassword,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: DeviceUtil.isDarkMode(context)
-                          ? ColorConst.whiteColor.withOpacity(0.5)
-                          : ColorConst.darkGreyColor,
-                    ),
-              ),
+              TextButton(
+                onPressed: () =>
+                    context.read<LoginController>().forgotPassword(context),
+                child: Text(
+                  TextConst.forgotPassword,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: DeviceUtil.isDarkMode(context)
+                            ? ColorConst.whiteColor.withOpacity(0.5)
+                            : ColorConst.darkGreyColor,
+                      ),
+                ),
+              )
             ],
           ),
           const SizedBox(
             height: 30,
           ),
           // SignIn Button
-          const SizedBox(
+          SizedBox(
             width: double.infinity,
             height: 50,
-            child: SignInButton(),
+            child: AuthButton(
+              onPressed: context.read<LoginController>().signIn,
+              btnText: TextConst.signInButtonText,
+            ),
           ),
           const SizedBox(
             height: NumConst.defaultPadding,

@@ -31,7 +31,7 @@ class AppTextTheme {
     bodyMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
     labelLarge: GoogleFonts.poppins().copyWith(color: Colors.black,fontWeight: FontWeight.bold,),
     labelMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
-    headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.black),
+    headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.black, fontWeight: FontWeight.bold,),
     headlineMedium: GoogleFonts.poppins().copyWith(color: Colors.black),
     headlineLarge: GoogleFonts.poppins().copyWith(color: Colors.black),
   );
@@ -41,7 +41,7 @@ class AppTextTheme {
     bodyMedium: GoogleFonts.poppins().copyWith(color: Colors.white),
     labelLarge: GoogleFonts.poppins().copyWith(color: Colors.white,fontWeight: FontWeight.bold,),
     labelMedium: GoogleFonts.poppins().copyWith(color: Colors.white),
-    headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.white),
+    headlineSmall: GoogleFonts.poppins().copyWith(color: Colors.white, fontWeight: FontWeight.bold,),
     headlineMedium: GoogleFonts.poppins().copyWith(color: Colors.white),
     headlineLarge: GoogleFonts.poppins().copyWith(color: Colors.white),
   );
