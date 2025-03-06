@@ -7,7 +7,6 @@ import 'package:ecommerce_app/feature/auth/controllers/create_account_controller
 import 'package:ecommerce_app/util/device_util.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 
 class ResetPasswordScreen extends StatelessWidget {
   const ResetPasswordScreen({super.key});

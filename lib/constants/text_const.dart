@@ -29,6 +29,8 @@ class TextConst{
   static const String phoneNumber = 'Phone Number';
   static const String password = 'Password';
   static const String registerButtonText = 'Create Account';
+  static const String acceptPrivacyPolicy = 'Accept Privacy Policy';
+  static const String acceptPrivacyPolicyMsg = 'In order to create your account you must accept our Privacy Policy & Terms of Use';
 
   // Email Verification Screen
   static const String verifyYourEmailAddress = 'Verify your email address!';
@@ -49,5 +51,6 @@ class TextConst{
   static const String resetPasswordHeading = 'Password Reset Email Sent';
   static const String resetPasswordMsg = '''A password reset link has been sent to your email address. Please check your inbox and follow the instructions provided to reset your password.''';
   static const String done = 'Done';
+
 
 }

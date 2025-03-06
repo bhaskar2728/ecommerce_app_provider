@@ -13,4 +13,8 @@ class ColorConst{
   static const darkActiveColor = Colors.white;
   static const lightActiveColor = Colors.black;
   static const dotColor = Colors.grey;
+
+  // SnackBar colors
+  static const msgSnackBarColor = Color(0xFFD0850B);
+  static const errorSnackBarColor = Color(0xC1AE4B3A);
 }
